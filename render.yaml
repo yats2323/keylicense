@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: framecut-license-api
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    disk:
+      name: license-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: ADMIN_API_TOKEN
+        sync: false
+      - key: LICENSE_PRIVATE_XML
+        sync: false
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
+      - key: DATA_FILE
+        value: /var/data/licenses.json

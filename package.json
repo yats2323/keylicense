@@ -1,0 +1,16 @@
+{
+  "name": "framecut-license-webhook-api",
+  "version": "1.1.0",
+  "private": true,
+  "description": "FRAMECUT license API with Discord webhook notifications; no Discord bot login required",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
